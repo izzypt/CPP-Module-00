@@ -58,3 +58,10 @@ be 0.
 # Exercise 00
 
 ![image](https://github.com/izzypt/CPP-Module-00/assets/73948790/b67bd00a-9ba0-4965-9551-4ac58803a9ef)
+
+# Exercise 01
+
+![image](https://github.com/izzypt/CPP-Module-00/assets/73948790/fafad39c-9f9c-4ab5-af3a-3baa672288d6)
+
+![image](https://github.com/izzypt/CPP-Module-00/assets/73948790/b0ade502-4251-474d-8c21-29447cb01503)
+
