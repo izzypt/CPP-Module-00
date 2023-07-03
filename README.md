@@ -12,19 +12,14 @@ Namespaces, classes, member functions, stdio streams, initialization lists, stat
 ### Formatting and naming conventions
 
  - The exercise directories will be named this way: ex00, ex01, ... , exn
- - Name your files, classes, functions, member functions and attributes as required in
-the guidelines.
- - Write class names in UpperCamelCase format. Files containing class code will
-  always be named according to the class name. For instance:
+ - Write class names in UpperCamelCase format. Files containing class code will always be named according to the class name. For instance:
   ClassName.hpp/ClassName.h, ClassName.cpp, or ClassName.tpp. Then, if you
   have a header file containing the definition of a class "BrickWall" standing for a
   brick wall, its name will be BrickWall.hpp.
  - Unless specified otherwise, every output messages must be ended by a new-line
 character and displayed to the standard output.
 - Goodbye Norminette! No coding style is enforced in the C++ modules. You can
-follow your favorite one. But keep in mind that a code your peer-evaluators can’t
-understand is a code they can’t grade. Do your best to write a clean and readable
-code.
+follow your favorite one.
 
 ### Allowed/Forbidden
 
@@ -59,25 +54,35 @@ be 0.
 
  Here's a short list of some important methods for working with strings in C++ along with a brief description of each:
 
-- length() or size(): Returns the length of the string, i.e., the number of characters in the string.
+- ```length()``` or ```size()```:
+  - Returns the length of the string, i.e., the number of characters in the string.
 
-- empty(): Checks if the string is empty or not. Returns true if the string is empty, and false otherwise.
+- ```empty()```:
+  - Checks if the string is empty or not. Returns true if the string is empty, and false otherwise.
 
-- clear(): Clears the contents of the string, making it an empty string.
+- ```clear()```:
+  - Clears the contents of the string, making it an empty string.
 
-- substr(start, length): Returns a substring of the string starting from the start index and of the specified length. If length is not provided, it returns the substring from start until the end of the string.
+- ```substr(start, length)```:
+  - Returns a substring of the string starting from the start index and of the specified length. If length is not provided, it returns the substring from start until the end of the string.
 
-- find(substring): Searches for the first occurrence of the substring within the string and returns its index. If the substring is not found, it returns std::string::npos.
+- ```find(substring)```:
+  - Searches for the first occurrence of the substring within the string and returns its index. If the substring is not found, it returns std::string::npos.
 
-- replace(start, length, new_string): Replaces a portion of the string, specified by start and length, with the new_string.
+- ```replace(start, length, new_string)```:
+  - Replaces a portion of the string, specified by start and length, with the new_string.
 
-- append(str): Appends the str at the end of the string.
+- ```append(str)```:
+  - Appends the str at the end of the string.
 
-- insert(pos, str): Inserts the str at the specified pos index within the string.
+- ```insert(pos, str)```:
+  - Inserts the str at the specified pos index within the string.
 
-- erase(start, length): Removes a portion of the string, starting from start and of the specified length.
+- ```erase(start, length)```:
+  - Removes a portion of the string, starting from start and of the specified length.
 
-- compare(str): Compares the string with str and returns an integer value indicating their lexicographical relationship. It returns 0 if both strings are equal, a negative value if the string is less than str, and a positive value if the string is greater than str.
+- ```compare(str)```:
+  - Compares the string with str and returns an integer value indicating their lexicographical relationship. It returns 0 if both strings are equal, a negative value if the string is less than str, and a positive value if the string is greater than str.
 
 These are just a few commonly used methods for string manipulation in C++. There are many more methods available in the <string> library that provide additional functionality, such as case conversion, character manipulation, and more.
 
