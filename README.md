@@ -202,4 +202,21 @@ std::cin.clear();
 
 is commonly used in error-handling scenarios to reset the stream after an input failure.
 ```
+- ```std::stoi()```
 
+  - In C++, the function `std::stoi()` (string to int) is typically used to convert a string to an integer. 
+  - It is part of the `<string>` header and provides more robust error handling compared to `atoi()`. Here's an example of how you can use `std::stoi()` in your code:
+
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string input = "123";
+    int number = std::stoi(input);
+    std::cout << "Number: " << number << std::endl;
+    return 0;
+}
+```
+
+  Output: "Number: 123"
