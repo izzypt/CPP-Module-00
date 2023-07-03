@@ -91,3 +91,81 @@ These are just a few commonly used methods for string manipulation in C++. There
 
 ![image](https://github.com/izzypt/CPP-Module-00/assets/73948790/b0ade502-4251-474d-8c21-29447cb01503)
 
+Used and usefull function on the exercise :
+
+
+- ```std::cout```
+
+  - It is used for outputting data to the standard output stream, typically the console or terminal.
+  - You can use the << operator with std::cout to send data to the output stream.
+
+For example: 
+
+```
+std::cout << "Hello, world!";
+
+will print "Hello, world!" to the console.
+```
+
+
+- ```std::cin```
+
+  - It is used for reading input from the standard input stream, typically the keyboard.
+  - You can use the >> operator with std::cin to read data from the input stream into variables.
+
+For example: 
+
+```
+int num;
+
+std::cin >> num;
+
+will wait for user input and store the entered value into the variable num.
+```
+
+- ```std::setw```
+
+std::setw is a function in the <iomanip> header of the C++ standard library.
+It is used to set the width of the output field for the next value printed to the output stream.
+It takes an integer argument that specifies the width in characters.
+
+For example: 
+
+```
+std::cout << std::setw(5) << 42;
+
+will output " 42" (with three leading spaces) because the width is set to 5.
+```
+
+
+- ```str.compare```
+
+  - str.compare is a member function of the std::string class in the C++ standard library.
+  - It is used to compare two strings lexicographically.
+  - It returns an integer value indicating the result of the comparison: 0 if the strings are equal, a negative value if the calling string is lexicographically less than the argument, and a positive value if the calling string is lexicographically greater.
+
+For example: 
+
+```
+std::string str1 = "apple";
+std::string str2 = "banana";
+int result = str1.compare(str2);
+
+will set result to a negative value (-1) because "apple" is lexicographically less than "banana".
+```
+
+- ```std::cin.clear```
+
+  - std::cin.clear is a member function of the std::istream class in the C++ standard library.
+  - It is used to clear the error state flags of the input stream.
+  - When there is an error, such as an incorrect data type entered, the error flag is set, and subsequent input operations may fail.
+  - Calling std::cin.clear() clears the error flags, allowing you to recover from the error state and continue reading input.
+
+For example:
+
+```
+std::cin.clear();
+
+is commonly used in error-handling scenarios to reset the stream after an input failure.
+```
+
