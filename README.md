@@ -12,19 +12,14 @@ Namespaces, classes, member functions, stdio streams, initialization lists, stat
 ### Formatting and naming conventions
 
  - The exercise directories will be named this way: ex00, ex01, ... , exn
- - Name your files, classes, functions, member functions and attributes as required in
-the guidelines.
- - Write class names in UpperCamelCase format. Files containing class code will
-  always be named according to the class name. For instance:
+ - Write class names in UpperCamelCase format. Files containing class code will always be named according to the class name. For instance:
   ClassName.hpp/ClassName.h, ClassName.cpp, or ClassName.tpp. Then, if you
   have a header file containing the definition of a class "BrickWall" standing for a
   brick wall, its name will be BrickWall.hpp.
  - Unless specified otherwise, every output messages must be ended by a new-line
 character and displayed to the standard output.
 - Goodbye Norminette! No coding style is enforced in the C++ modules. You can
-follow your favorite one. But keep in mind that a code your peer-evaluators can’t
-understand is a code they can’t grade. Do your best to write a clean and readable
-code.
+follow your favorite one.
 
 ### Allowed/Forbidden
 
@@ -59,31 +54,70 @@ be 0.
 
  Here's a short list of some important methods for working with strings in C++ along with a brief description of each:
 
-- length() or size(): Returns the length of the string, i.e., the number of characters in the string.
+- ```length()``` or ```size()```:
+  - Returns the length of the string, i.e., the number of characters in the string.
 
-- empty(): Checks if the string is empty or not. Returns true if the string is empty, and false otherwise.
+- ```empty()```:
+  - Checks if the string is empty or not. Returns true if the string is empty, and false otherwise.
 
-- clear(): Clears the contents of the string, making it an empty string.
+- ```clear()```:
+  - Clears the contents of the string, making it an empty string.
 
-- substr(start, length): Returns a substring of the string starting from the start index and of the specified length. If length is not provided, it returns the substring from start until the end of the string.
+- ```substr(start, length)```:
+  - Returns a substring of the string starting from the start index and of the specified length. If length is not provided, it returns the substring from start until the end of the string.
 
-- find(substring): Searches for the first occurrence of the substring within the string and returns its index. If the substring is not found, it returns std::string::npos.
+- ```find(substring)```:
+  - Searches for the first occurrence of the substring within the string and returns its index. If the substring is not found, it returns std::string::npos.
 
-- replace(start, length, new_string): Replaces a portion of the string, specified by start and length, with the new_string.
+- ```replace(start, length, new_string)```:
+  - Replaces a portion of the string, specified by start and length, with the new_string.
 
-- append(str): Appends the str at the end of the string.
+- ```append(str)```:
+  - Appends the str at the end of the string.
 
-- insert(pos, str): Inserts the str at the specified pos index within the string.
+- ```insert(pos, str)```:
+  - Inserts the str at the specified pos index within the string.
 
-- erase(start, length): Removes a portion of the string, starting from start and of the specified length.
+- ```erase(start, length)```:
+  - Removes a portion of the string, starting from start and of the specified length.
 
-- compare(str): Compares the string with str and returns an integer value indicating their lexicographical relationship. It returns 0 if both strings are equal, a negative value if the string is less than str, and a positive value if the string is greater than str.
+- ```compare(str)```:
+  - Compares the string with str and returns an integer value indicating their lexicographical relationship. It returns 0 if both strings are equal, a negative value if the string is less than str, and a positive value if the string is greater than str.
 
 These are just a few commonly used methods for string manipulation in C++. There are many more methods available in the <string> library that provide additional functionality, such as case conversion, character manipulation, and more.
 
 # Exercise 00
 
 ![image](https://github.com/izzypt/CPP-Module-00/assets/73948790/b67bd00a-9ba0-4965-9551-4ac58803a9ef)
+
+### Usefull here :
+
+The `toupper()` function in C++ is not part of the `<iostream>` or `<cstring>` libraries, but they indirectly include the necessary headers. 
+It is actually part of the `<cctype>` library, which provides functions for character handling and classification.
+
+Here's a description of the `toupper()` function:
+
+- `toupper()` is a function that is used to convert a lowercase character to its corresponding uppercase representation.
+- It takes a single argument of type `int` or `char`, which represents the character to be converted.
+- If the input character is a lowercase letter, `toupper()` returns the uppercase version of that letter.
+- If the input character is already an uppercase letter or not a letter at all, `toupper()` returns the character unchanged.
+- The function is typically used in conjunction with the standard C++ string functions, such as `std::toupper(c)` to convert a single character or `std::transform()` to convert a whole string to uppercase.
+- Here's an example usage of `toupper()`:
+```cpp
+#include <cctype>
+#include <iostream>
+
+int main() {
+    char lowercase = 'a';
+    char uppercase = std::toupper(lowercase);
+    std::cout << "Uppercase: " << uppercase << std::endl;
+    return 0;
+}
+```
+Output: "Uppercase: A"
+
+Note that `toupper()` operates on single characters and does not modify strings in place. If you want to convert a whole string to uppercase, you'll need to iterate over the characters and apply `toupper()` to each one.
+
 
 # Exercise 01
 
@@ -168,4 +202,57 @@ std::cin.clear();
 
 is commonly used in error-handling scenarios to reset the stream after an input failure.
 ```
+- ```std::stoi()```
 
+  - In C++, the function `std::stoi()` (string to int) is typically used to convert a string to an integer. 
+  - It is part of the `<string>` header and provides more robust error handling compared to `atoi()`. Here's an example of how you can use `std::stoi()` in your code:
+
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string input = "123";
+    int number = std::stoi(input);
+    std::cout << "Number: " << number << std::endl;
+    return 0;
+}
+```
+
+  Output: "Number: 123"
+
+
+- `std::getline()`
+
+  - The `std::getline()` allows you to read a line of input from an input stream, such as `std::cin`, and store it in a string variable.
+  - Function Signature: `std::getline(std::istream& input_stream, std::string& input_string, char delimiter = '\n')`
+  - Header: `<string>`
+  - Parameters:
+    - `input_stream`: The input stream from which the line is to be read. Commonly used with `std::cin`.
+    - `input_string`: The string variable in which the line of input is stored.
+    - `delimiter` (optional): The delimiter character used to determine the end of the line. By default, it is set to the newline character (`\n`).
+  - `std::getline()` reads characters from the input stream until it encounters the specified delimiter or reaches the end of the stream.
+  - The delimiter character is not included in the resulting string.
+  - The extracted line of input is stored in the provided string variable (`input_string`).
+  - If the extraction fails or reaches the end of the stream before finding the delimiter, the function sets the failbit of the input stream, which can be checked using the stream's `good()` or `fail()` member functions.
+  - By default, `std::getline()` reads until it encounters a newline character (`\n`), effectively reading a full line of text. However, you can specify a different delimiter if needed.
+
+Example usage:
+
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string input;
+
+    std::cout << "Enter your name: ";
+    std::getline(std::cin, input);  // Read a line of input from std::cin and store it in 'input'
+
+    std::cout << "Hello, " << input << "!" << std::endl;
+
+    return 0;
+}
+```
+
+In this example, `std::getline(std::cin, input)` reads a line of input from the user, storing it in the `input` string variable. The program then greets the user by printing their name back to the console.
