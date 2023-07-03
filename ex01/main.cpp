@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 19:04:04 by simao             #+#    #+#             */
-/*   Updated: 2023/07/02 20:11:04 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/03 14:06:22 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,29 @@
 
 int main()
 {
-    std::string name;
+    std::string command;
+    std::string search_num;
+    PhoneBook   book;
 
+    std::cout << "PHONEBOOK: ADD OR SEARCH CONTACTS" << std::endl;
     while(1)
     {
-        std::cin >> name;
-        if (!name.compare("ADD"))
-            std::cout << "Add who ?" << std::endl;
-        else if (!name.compare("SEARCH"))
-            std::cout << "Search what?" << std::endl;
-        else if (!name.compare("EXIT"))
+        std::cout << "> ";
+        std::cin >> command;
+        if (!command.compare("ADD"))
+            book.add_contact();
+        else if (!command.compare("SEARCH"))
+        {
+            std::cout << "Provide contact index: " << std::endl;
+            std::cin >> search_num; 
+            book.search(atoi((const char *)&search_num));
+        }
+        else if (!command.compare("EXIT"))
             std::cout << "Exit to ?" << std::endl;
         else
             std::cout << "Please pick one of the valid commands." << std::endl;
         std::cin.clear();
     }
-    std::cout << "What is your name?\n";
-    std::cin >> name;
-    std::cout << "Your name is " << name << " ?\n";
 
     return (0);
 }
