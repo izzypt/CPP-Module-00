@@ -220,3 +220,39 @@ int main() {
 ```
 
   Output: "Number: 123"
+
+
+- `std::getline()`
+
+  - The `std::getline()` allows you to read a line of input from an input stream, such as `std::cin`, and store it in a string variable.
+  - Function Signature: `std::getline(std::istream& input_stream, std::string& input_string, char delimiter = '\n')`
+  - Header: `<string>`
+  - Parameters:
+    - `input_stream`: The input stream from which the line is to be read. Commonly used with `std::cin`.
+    - `input_string`: The string variable in which the line of input is stored.
+    - `delimiter` (optional): The delimiter character used to determine the end of the line. By default, it is set to the newline character (`\n`).
+  - `std::getline()` reads characters from the input stream until it encounters the specified delimiter or reaches the end of the stream.
+  - The delimiter character is not included in the resulting string.
+  - The extracted line of input is stored in the provided string variable (`input_string`).
+  - If the extraction fails or reaches the end of the stream before finding the delimiter, the function sets the failbit of the input stream, which can be checked using the stream's `good()` or `fail()` member functions.
+  - By default, `std::getline()` reads until it encounters a newline character (`\n`), effectively reading a full line of text. However, you can specify a different delimiter if needed.
+
+Example usage:
+
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string input;
+
+    std::cout << "Enter your name: ";
+    std::getline(std::cin, input);  // Read a line of input from std::cin and store it in 'input'
+
+    std::cout << "Hello, " << input << "!" << std::endl;
+
+    return 0;
+}
+```
+
+In this example, `std::getline(std::cin, input)` reads a line of input from the user, storing it in the `input` string variable. The program then greets the user by printing their name back to the console.
