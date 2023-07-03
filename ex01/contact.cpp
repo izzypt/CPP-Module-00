@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 21:23:33 by simao             #+#    #+#             */
-/*   Updated: 2023/07/03 13:00:49 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/03 18:11:43 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 Contact::Contact(void)
 {
-    std::cout << "Contact constructor called" << std::endl;
+    //std::cout << "Contact constructor called" << std::endl;
     return;
 }
 
 Contact::~Contact(void)
 {
-    std::cout << "Contact deconstructor called" << std::endl;
+    //std::cout << "Contact deconstructor called" << std::endl;
     return;
 }
 
