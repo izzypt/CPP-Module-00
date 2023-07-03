@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 18:52:20 by simao             #+#    #+#             */
-/*   Updated: 2023/07/03 20:31:05 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/03 21:06:45 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <iostream>
 #include <iomanip> //setw
 #include <string> //stoi
+#include <cctype>
 
 /* Colors */
 # define ORIGINAL		"\e[0m"
@@ -55,7 +56,7 @@ class PhoneBook
 		PhoneBook(void);
 		~PhoneBook(void);
 		void add_contact(void);
-		void search(int index);
+		void search(std::string index);
 		void display_contacts(void);
 		Contact contacts[8];
 };

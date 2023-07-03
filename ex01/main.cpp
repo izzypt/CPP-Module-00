@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 19:04:04 by simao             #+#    #+#             */
-/*   Updated: 2023/07/03 19:16:24 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/03 21:04:20 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main()
             book.display_contacts();
             std::cout << "Provide contact index for more information: " << std::endl;
             std::cin >> search_num; 
-            book.search(std::stoi(search_num));
+            book.search(search_num);
         }
         else if (!command.compare("EXIT"))
             break;
