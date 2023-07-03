@@ -90,6 +90,35 @@ These are just a few commonly used methods for string manipulation in C++. There
 
 ![image](https://github.com/izzypt/CPP-Module-00/assets/73948790/b67bd00a-9ba0-4965-9551-4ac58803a9ef)
 
+### Usefull here :
+
+The `toupper()` function in C++ is not part of the `<iostream>` or `<cstring>` libraries, but they indirectly include the necessary headers. 
+It is actually part of the `<cctype>` library, which provides functions for character handling and classification.
+
+Here's a description of the `toupper()` function:
+
+- `toupper()` is a function that is used to convert a lowercase character to its corresponding uppercase representation.
+- It takes a single argument of type `int` or `char`, which represents the character to be converted.
+- If the input character is a lowercase letter, `toupper()` returns the uppercase version of that letter.
+- If the input character is already an uppercase letter or not a letter at all, `toupper()` returns the character unchanged.
+- The function is typically used in conjunction with the standard C++ string functions, such as `std::toupper(c)` to convert a single character or `std::transform()` to convert a whole string to uppercase.
+- Here's an example usage of `toupper()`:
+```cpp
+#include <cctype>
+#include <iostream>
+
+int main() {
+    char lowercase = 'a';
+    char uppercase = std::toupper(lowercase);
+    std::cout << "Uppercase: " << uppercase << std::endl;
+    return 0;
+}
+```
+Output: "Uppercase: A"
+
+Note that `toupper()` operates on single characters and does not modify strings in place. If you want to convert a whole string to uppercase, you'll need to iterate over the characters and apply `toupper()` to each one.
+
+
 # Exercise 01
 
 ![image](https://github.com/izzypt/CPP-Module-00/assets/73948790/fafad39c-9f9c-4ab5-af3a-3baa672288d6)
