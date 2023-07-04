@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 21:08:51 by simao             #+#    #+#             */
-/*   Updated: 2023/07/03 21:17:30 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/04 13:47:56 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,15 +74,15 @@ void PhoneBook::search(std::string index)
 void PhoneBook::display_contacts(void)
 {
     int i = 0;
-    std::cout << "---------------------------------------------" << std::endl;
+    std::cout << GREEN << "---------------------------------------------" << std::endl;
     std::cout << "| Index    | Name     | Last Name| Nickname |" << std::endl;
     while (i < PhoneBook::max_contact_count)
     {
         std::cout << "|"<< std::setw(10) << i;
-        std::cout << "|"<< std::setw(10) << PhoneBook::contacts[i].first_name;
-        std::cout << "|"<< std::setw(10) << PhoneBook::contacts[i].last_name;
-        std::cout << "|"<< std::setw(10) << PhoneBook::contacts[i].nickname <<  "|" << std::endl;
+        std::cout << "|"<< std::setw(10) << truncate(PhoneBook::contacts[i].first_name);
+        std::cout << "|"<< std::setw(10) << truncate(PhoneBook::contacts[i].last_name);
+        std::cout << "|"<< std::setw(10) << truncate(PhoneBook::contacts[i].nickname) <<  "|" << std::endl;
         i++;
     }
-    std::cout << "---------------------------------------------" << std::endl;
+    std::cout << "---------------------------------------------" << ORIGINAL << std::endl;
 }

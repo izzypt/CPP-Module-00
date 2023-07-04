@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 18:52:20 by simao             #+#    #+#             */
-/*   Updated: 2023/07/03 21:06:45 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/04 13:38:29 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,16 @@
 #include <cctype>
 
 /* Colors */
+
 # define ORIGINAL		"\e[0m"
 # define RED			"\e[0;31m"
 # define L_RED			"\e[0;38;5;9m"
 # define GREEN			"\e[0;32m"
 # define D_GREEN		"\e[0;38;5;22m"
+
+/* Functions */
+
+std::string truncate(std::string str);
 
 /* Classes */
 

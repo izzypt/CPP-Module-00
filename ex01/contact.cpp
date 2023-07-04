@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 21:23:33 by simao             #+#    #+#             */
-/*   Updated: 2023/07/03 18:11:43 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/04 13:45:50 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,11 @@ void Contact::set_last_name(std::string name)
 void Contact::set_phone_number(std::string number)
 {
 	this->phone_number = number;
+}
+
+std::string truncate(std::string str)
+{
+	if (str.length() >= 10)
+		return (str.substr(0, 9) + ".");
+	return (str);
 }

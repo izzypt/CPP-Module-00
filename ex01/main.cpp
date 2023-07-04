@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 19:04:04 by simao             #+#    #+#             */
-/*   Updated: 2023/07/03 21:04:20 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/04 13:34:21 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int main()
         else if (!command.compare("EXIT"))
             break;
         else
-            std::cout << "Please pick one of the valid commands." << std::endl;
+            std::cout << RED << "Please pick one of the valid commands." << ORIGINAL << std::endl;
         std::cin.clear();
     }
 
