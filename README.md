@@ -1,6 +1,8 @@
 # CPP-Module-00
-Namespaces, classes, member functions, stdio streams, initialization lists, static, const, and some other basic stuf
+Namespaces, classes, member functions, stdio streams, initialization lists, static, const, and some other basic stuff.
 
+- https://cplusplus.com/reference/string/string/
+- https://cplusplus.com/reference/iomanip/
 
 # General rules
 
